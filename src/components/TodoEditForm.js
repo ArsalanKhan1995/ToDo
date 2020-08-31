@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector,useDispatch } from 'react-redux'
 import { editTodo } from 'redux/actions'
 
@@ -43,5 +44,19 @@ function TodoEditForm({todo,showEditForm,setShowEditForm}) {
       </div>
     </form>
   )
+}
+
+TodoEditForm.propTypes = {
+  todo: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    bucket: PropTypes.string.isRequired,
+    added: PropTypes.string.isRequired,
+    edited: PropTypes.string.isRequired
+  }).isRequired,
+  showEditForm: PropTypes.bool.isRequired,
+  setShowEditForm: PropTypes.func.isRequired
 }
 export default TodoEditForm

@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import PropTypes from 'prop-types'
 import moment from 'moment'
 
 import { useSelector,useDispatch } from 'react-redux'
@@ -51,4 +52,15 @@ const ListItem = ({ todo }) => {
   )
 }
 
+ListItem.propTypes = {
+  todo: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    bucket: PropTypes.string.isRequired,
+    added: PropTypes.string.isRequired,
+    edited: PropTypes.string.isRequired
+  }).isRequired,
+}
 export default ListItem

@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ListItem from 'components/ListItem'
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos,error }) => {
+  if (error) return <b style={{color:"#de2a2a"}}>{error.message}</b>
   return <div className="mb-3" id="done" role="tabpanel" aria-labelledby="done-tab">
     <h2><b>ToDo List</b></h2>
     {todos.length?todos.map(todo => (
