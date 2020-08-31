@@ -1,0 +1,130 @@
+$bg: #0a192f
+$secondary-bg: #172a45
+$border-color: white
+$text-color: #ccd6f6
+$primary: #64ffda
+$secondary: #de2a2a
+
+body
+  background: $bg
+  color: $text-color
+  font-size: 16px
+
+.form-check-input
+  background-color: $bg
+  border: 1px $secondary solid
+
+  &:checked
+    background-color: $bg
+    border-color: $primary
+
+
+header
+  background: $secondary-bg
+  border-bottom: 1px $border-color solid
+  margin-bottom: 15px
+
+  .logo
+    width: 65px
+    height: 65px
+    border-radius: 5px
+    margin-bottom: 5px
+    margin-left: 10px
+
+  .header-content
+    .header-date
+      font-size: .85em
+
+    .header-title
+      margin-top: -5px
+
+.form
+  .form-control
+    background: $secondary-bg
+    border: 1px $border-color solid
+    max-height: 8em
+    color: $text-color
+
+  .btn-submit
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    .btn-icon
+      font-size: 1.4em
+      margin-right: 5px
+
+.list-group-item
+  background: $secondary-bg
+  border: 1px $border-color solid
+  transition: background .1s ease-in-out
+
+  &:hover
+    background: $bg
+    cursor: pointer
+
+  .listitem-bucket
+    font-size: 0.60rem
+    background-color: $bg
+    border-radius: 4px
+    border: 1px solid $primary
+
+  .list-item-add-time
+    margin-top: .5rem
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    .iconify
+      font-size: 1.2em
+      margin-right: 5px
+
+.nav
+  background: $bg
+  border: 1px $border-color solid
+  border-radius: 5px
+
+  .nav-link
+    .badge
+      background: $secondary-bg
+
+.dropdown
+  margin-top: -2px
+
+  .btn
+    position: relative
+    background: $bg
+    border: 1px $border-color solid
+    width: 20px
+    height: 20px
+    font-size: 16px
+    color: $text-color
+
+    .iconify
+      position: absolute
+      left: 1px
+      top: 1px
+      
+  .dropdown-menu
+    background: $bg
+    border: 1px $border-color solid
+
+    .dropdown-item
+      background: $bg
+      color: $text-color
+      transition: background .1s ease-in-out
+
+      &:active
+        background: $primary
+
+      &:hover
+        background: $primary
+        color: $bg
+
+.todolist-filter
+  text-decoration: none
+  color: $text-color
+
+  &:hover
+    color: $primary
