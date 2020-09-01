@@ -43,7 +43,7 @@ const Form = () => {
       <div className="mb-3">
         <button className="btn btn-submit btn-success btn-block" onClick={ handleSubmit }>
           <span className="btn-icon iconify" data-icon="carbon:add-alt" data-inline="false"></span>
-          <span className="btn-title">Add todo</span>
+          <span className="btn-title" data-testid="add-todo-form-display">Add todo</span>
         </button>
       </div>
     </form>
